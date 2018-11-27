@@ -48,7 +48,7 @@ class Listing < ApplicationRecord
   # Note that the order here is important, or at least the first one
   # is important.  why?
 
-
+  enum status: [:not_yet_seen, :ignore, :watch]
 
   def mark_as_alerted
     self.alerted_at = Time.now 
@@ -61,7 +61,7 @@ class Listing < ApplicationRecord
   # redirects the call to our enumerated status attribute as not_yet_seen.
   # This can also be done using an alias command.
   def self.not_reviewed
-    self.not_yet_seen
+   # self.not_yet_seen
   end
 
   # apply a status change to a collection of listings all at once (i.e. using

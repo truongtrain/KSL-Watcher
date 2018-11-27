@@ -54,7 +54,15 @@
       //            You can uncheck a checkbox using a jQuery function on 
       //            the element, prop(), passing it 'checked' and false.
       //            Google search for jquery unchecking checkbox.  Also look
-      //            at line 35 above.
+//            at line 35 above.
+
+
+$.post(
+'/listings/mass_edit.js',
+{ id_list: ids, status_to_set: $(event.target).attr('data-status') },
+function(data){
+   $('.listing-checkbox').prop('checked', false);
+})
 
     })
 
