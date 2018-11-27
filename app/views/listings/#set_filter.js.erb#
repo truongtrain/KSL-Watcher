@@ -13,6 +13,8 @@ console.log('rerendered the body of the table');
 // to the partial in this case.
 console.log('rerendered the filter buttons');
 
+$('#listings-selection-widget').html('<%= j render "listings-selection-widget" %>');
+
 // Remember that you can identify exactly which element to replace and which
 // partial template to render by looking at the index.html.erb file to see how
 // the page was created initially.  
