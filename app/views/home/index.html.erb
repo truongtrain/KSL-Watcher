@@ -14,6 +14,6 @@
   <%= link_to "Searches", searches_url, class: 'btn btn-default' %>
   <%= link_to "Your Watched Listings", listings_path(show_filter: :watch), class: 'btn btn-default' %>
   <%= link_to "Listings", listings_path, class: 'btn btn-default' %>
-  <%= link_to 'Run Searches on KSL','', remote: true, class: 'btn btn-default', id: 'run-search-button' %>
+  <%= link_to 'Run Searches on KSL', run_listings_poll_path, remote: true, class: 'btn btn-default', id: 'run-search-button' %>
 </div>
 
