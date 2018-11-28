@@ -61,7 +61,7 @@ class Listing < ApplicationRecord
   # redirects the call to our enumerated status attribute as not_yet_seen.
   # This can also be done using an alias command.
   def self.not_reviewed
-   # self.not_yet_seen
+    self.not_yet_seen
   end
 
   # apply a status change to a collection of listings all at once (i.e. using
