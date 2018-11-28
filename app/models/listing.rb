@@ -48,7 +48,7 @@ class Listing < ApplicationRecord
   # Note that the order here is important, or at least the first one
   # is important.  why?
 
-
+  enum status: [:not_yet_seen, :ignore, :watch]
 
   def mark_as_alerted
     self.alerted_at = Time.now 

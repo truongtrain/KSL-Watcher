@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'user_sessions#destroy', as: :logout
 
   post '/listings/set_filter', to: 'listings#set_filter'
+  post '/listings/mass_edit', to: 'listings#mass_edit'
 
   # TODO 3.2:  you need to add a route mapping to go from '/listings/mass_edit'
   # to the listings controller, mass_edit method.  Check the way the ajax

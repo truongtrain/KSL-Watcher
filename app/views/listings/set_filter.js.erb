@@ -2,6 +2,25 @@
 // with a new rendering of the listings_table_body partial view template.
 // Remember to pass @listings to the partial view template as a local var named 'listings'.
 // Also remember to escape the view's rendering using 'j' which is short for escape_javascript.
+
+$('#listings-table-body').html('<%= j render "listings_table_body", listings: @listings %>');
+
+console.log('rerendered the body of the table');
+
+// TODO 2.2 - add javascript to replace the contents of the selection widget 
+// with a new rendering of the filter_buttons partial view template.
+// This will look very similar to the code above but you don't need to pass any variables down
+// to the partial in this case.
+console.log('rerendered the filter buttons');
+
+$('#listings-selection-widget').html('<%= j render "filter_buttons" %>');
+
+// Remember that you can identify exactly which element to replace and which
+// partial template to render by looking at the index.html.erb file to see how
+// the page was created initially.  // TODO 2.1 - add javascript to replace the contents of the table body
+// with a new rendering of the listings_table_body partial view template.
+// Remember to pass @listings to the partial view template as a local var named 'listings'.
+// Also remember to escape the view's rendering using 'j' which is short for escape_javascript.
 console.log('rerendered the body of the table');
 
 // TODO 2.2 - add javascript to replace the contents of the selection widget 
